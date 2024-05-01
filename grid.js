@@ -59,6 +59,9 @@ document.addEventListener("DOMContentLoaded", function () {
     el: container,
     data: data,
     columns: columns,
+    scrollX: true,
+    scrollY: true,
+    rowHeight: "auto",
     autoHeight: true, // 자동 높이 설정
     bodyHeight: "fitToParent", // 부모 요소의 높이에 맞게 그리드의 높이 조정
   });
