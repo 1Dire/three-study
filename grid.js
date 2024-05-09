@@ -105,7 +105,12 @@ document.addEventListener("DOMContentLoaded", function () {
       ],
     },
 
-    // Add more data as needed
+    {
+      title: "Animation",
+      link: "day03",
+      date: "2024-05-07",
+      keyword: [],
+    },
   ];
 
   const columns = [
