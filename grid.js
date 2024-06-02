@@ -117,6 +117,12 @@ document.addEventListener("DOMContentLoaded", function () {
       date: "2024-05-09",
       keyword: [],
     },
+    {
+      title: "Geometries",
+      link: "day05",
+      date: "2024-06-03",
+      keyword: [],
+    },
   ];
 
   const columns = [
