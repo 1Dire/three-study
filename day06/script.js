@@ -10,7 +10,6 @@ const gui = new GUI({
   width: 300,
   title: "Nice debug UI",
 });
-gui.hide();
 const debugObject = {};
 window.addEventListener("keydown", (event) => {
   if (event.key == "h") {
