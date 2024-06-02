@@ -123,6 +123,12 @@ document.addEventListener("DOMContentLoaded", function () {
       date: "2024-06-03",
       keyword: [],
     },
+    {
+      title: "Debug UI",
+      link: "day06",
+      date: "2024-06-03",
+      keyword: [],
+    },
   ];
 
   const columns = [
