@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MeshStandardMaterial 속성</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .property {
+            margin-bottom: 20px;
+        }
+        .property h2 {
+            color: #007acc;
+        }
+        .property code {
+            display: block;
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>MeshStandardMaterial 주요 속성</h1>
+    
+    <div class="property">
+        <h2>color</h2>
+        <p>재질의 기본 색상입니다. 기본값은 <code>0xffffff</code> (흰색)입니다.</p>
+        <code>material.color.set(0xff0000); // 빨간색</code>
+    </div>
+
+    <div class="property">
+        <h2>roughness</h2>
+        <p>재질의 거칠기를 나타내는 값으로, 0(매끄러움)에서 1(거칠음) 사이의 값을 가집니다. 기본값은 <code>1</code>입니다.</p>
+        <code>material.roughness = 0.5;</code>
+    </div>
+
+    <div class="property">
+        <h2>metalness</h2>
+        <p>재질의 금속성을 나타내는 값으로, 0(비금속)에서 1(금속) 사이의 값을 가집니다. 기본값은 <code>0</code>입니다.</p>
+        <code>material.metalness = 1;</code>
+    </div>
+
+    <div class="property">
+        <h2>map</h2>
+        <p>재질의 색상을 정의하는 텍스처입니다.</p>
+        <code>
+            const textureLoader = new THREE.TextureLoader();<br>
+            material.map = textureLoader.load('/path/to/texture.jpg');
+        </code>
+    </div>
+
+    <div class="property">
+        <h2>aoMap</h2>
+        <p>앰비언트 오클루전 텍스처로, 조명 효과를 강화합니다.</p>
+        <code>material.aoMap = textureLoader.load('/path/to/aoMap.jpg');</code>
+    </div>
+
+    <div class="property">
+        <h2>aoMapIntensity</h2>
+        <p>앰비언트 오클루전의 강도입니다. 기본값은 <code>1</code>입니다.</p>
+        <code>material.aoMapIntensity = 0.5;</code>
+    </div>
+
+    <div class="property">
+        <h2>envMap</h2>
+        <p>환경 맵 텍스처로, 반사와 굴절 효과를 위해 사용됩니다.</p>
+        <code>material.envMap = textureLoader.load('/path/to/envMap.hdr');</code>
+    </div>
+
+    <div class="property">
+        <h2>normalMap</h2>
+        <p>표면의 미세한 디테일을 표현하는 노멀 맵 텍스처입니다.</p>
+        <code>material.normalMap = textureLoader.load('/path/to/normalMap.jpg');</code>
+    </div>
+
+    <div class="property">
+        <h2>displacementMap</h2>
+        <p>정점 위치를 변경하여 표면 디테일을 추가하는 텍스처입니다.</p>
+        <code>
+            material.displacementMap = textureLoader.load('/path/to/displacementMap.jpg');<br>
+            material.displacementScale = 0.1; // 변위 강도
+        </code>
+    </div>
+
+    <div class="property">
+        <h2>emissive</h2>
+        <p>재질의 자체 발광 색상입니다. 기본값은 <code>0x000000</code> (검정색)입니다.</p>
+        <code>material.emissive.set(0x00ff00); // 녹색으로 발광</code>
+    </div>
+
+    <div class="property">
+        <h2>emissiveIntensity</h2>
+        <p>발광 강도입니다. 기본값은 <code>1</code>입니다.</p>
+        <code>material.emissiveIntensity = 0.5;</code>
+    </div>
+
+    <div class="property">
+        <h2>emissiveMap</h2>
+        <p>발광 효과를 정의하는 텍스처입니다.</p>
+        <code>material.emissiveMap = textureLoader.load('/path/to/emissiveMap.jpg');</code>
+    </div>
+
+    <div class="property">
+        <h2>metalnessMap</h2>
+        <p>금속성을 정의하는 텍스처입니다.</p>
+        <code>material.metalnessMap = textureLoader.load('/path/to/metalnessMap.jpg');</code>
+    </div>
+
+    <div class="property">
+        <h2>roughnessMap</h2>
+        <p>거칠기를 정의하는 텍스처입니다.</p>
+        <code>material.roughnessMap = textureLoader.load('/path/to/roughnessMap.jpg');</code>
+    </div>
+
+    <div class="property">
+        <h2>alphaMap</h2>
+        <p>투명도를 정의하는 텍스처입니다.</p>
+        <code>
+            material.alphaMap = textureLoader.load('/path/to/alphaMap.jpg');<br>
+            material.transparent = true; // 투명도를 활성화
+        </code>
+    </div>
+
+    <div class="property">
+        <h2>bumpMap</h2>
+        <p>표면의 거칠기를 시뮬레이션하는 범프 맵 텍스처입니다.</p>
+        <code>
+            material.bumpMap = textureLoader.load('/path/to/bumpMap.jpg');<br>
+            material.bumpScale = 0.5; // 범프 강도
+        </code>
+    </div>
+
+    <div class="property">
+        <h2>clearcoat</h2>
+        <p>클리어 코트 레이어의 강도입니다. 기본값은 <code>0</code>입니다.</p>
+        <code>material.clearcoat = 1; // 클리어 코트 활성화</code>
+    </div>
+
+    <div class="property">
+        <h2>clearcoatRoughness</h2>
+        <p>클리어 코트 레이어의 거칠기입니다. 기본값은 <code>0</code>입니다.</p>
+        <code>material.clearcoatRoughness = 0.5;</code>
+    </div>
+</body>
+</html>
